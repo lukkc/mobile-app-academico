@@ -1,0 +1,48 @@
+<ion-header [ngClass]="theme">
+
+    <ion-navbar>
+        <ion-title>Configurações</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content [ngClass]="theme">
+
+    <ion-list radio-group [(ngModel)]="theme">
+        <ion-list-header>
+            Tema
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Claro</ion-label>
+            <ion-radio (click)="chooseTheme()" checked="true" value="light"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Escuro</ion-label>
+            <ion-radio (click)="chooseTheme()" value="dark"></ion-radio>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+
+        <ion-list-header>
+            Notificações
+        </ion-list-header>
+
+        <ion-card>
+            <ion-card-header no-padding>
+                <ion-item no-padding>
+                    <ion-label>Notificação de Atividades</ion-label>
+                    <ion-checkbox item-end [(ngModel)]="isItToNotifyActivities" (ionChange)="notificationOfActivities()"></ion-checkbox>
+                </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+                Ativa as notificações para avisar quando tem uma nova atividade no Unipe Virtual.
+            </ion-card-content>
+        </ion-card>
+
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,155 @@
+<ion-header [ngClass]="theme">
+    <ion-toolbar>
+        <ion-title>
+            {{disciplineScore.name | ownName}}
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+                <span ion-text showWhen="ios">Voltar</span>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content [ngClass]="theme">
+    <div>
+        <ion-list>
+
+            <ion-list-header>
+                1º ESTÁGIO
+            </ion-list-header>
+
+            <ion-item *ngIf="((disciplineScore.score||{}).estagio1||{}).mediaEstagio">
+                <h2>Nota Semipresencial</h2>
+                <p>
+                    {{ ((disciplineScore.score||{}).estagio1||{}).semiPresencial }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio1||{}).semiPresencial">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+            <ion-item *ngIf="((disciplineScore.score||{}).estagio1||{}).mediaEstagio">
+                <h2>Nota Presencial</h2>
+                <p>
+                    {{ ((disciplineScore.score||{}).estagio1||{}).presencial }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio1||{}).presencial">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+            <ion-item>
+                <h2>Sua Nota</h2>
+                <p *ngIf="!((disciplineScore.score||{}).estagio1||{}).mediaEstagio">
+                    {{ ((disciplineScore.score||{}).estagio1||{}).estagio }}
+                </p>
+                <p *ngIf="((disciplineScore.score||{}).estagio1||{}).mediaEstagio">
+                    {{ ((disciplineScore.score||{}).estagio1||{}).mediaEstagio }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio1||{}).mediaEstagio && !((disciplineScore.score||{}).estagio1||{}).estagio">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+        </ion-list>
+
+
+        <ion-list>
+
+            <ion-list-header>
+                2º ESTÁGIO
+            </ion-list-header>
+
+            <ion-item *ngIf="((disciplineScore.score||{}).estagio2||{}).mediaEstagio">
+                <h2>Nota Semipresencial</h2>
+                <p>
+                    {{ ((disciplineScore.score||{}).estagio2||{}).semiPresencial }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio2||{}).semiPresencial">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+            <ion-item *ngIf="((disciplineScore.score||{}).estagio2||{}).mediaEstagio">
+                <h2>Nota Presencial</h2>
+                <p>
+                    {{ ((disciplineScore.score||{}).estagio2||{}).presencial }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio2||{}).presencial">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+            <ion-item>
+                <h2>Sua Nota</h2>
+                <p *ngIf="!((disciplineScore.score||{}).estagio2||{}).mediaEstagio">
+                    {{ ((disciplineScore.score||{}).estagio2||{}).estagio }}
+                </p>
+                <p *ngIf="((disciplineScore.score||{}).estagio2||{}).mediaEstagio">
+                    {{ ((disciplineScore.score||{}).estagio2||{}).mediaEstagio }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio2||{}).mediaEstagio && !((disciplineScore.score||{}).estagio2||{}).estagio">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+        </ion-list>
+
+
+        <ion-list>
+
+            <ion-list-header>
+                3º ESTÁGIO
+            </ion-list-header>
+            
+            <ion-item *ngIf="((disciplineScore.score||{}).estagio3||{}).mediaEstagio">
+                <h2>Nota Semipresencial</h2>
+                <p>
+                    {{ ((disciplineScore.score||{}).estagio3||{}).semiPresencial }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio3||{}).semiPresencial">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+            <ion-item *ngIf="((disciplineScore.score||{}).estagio3||{}).mediaEstagio">
+                <h2>Nota Presencial</h2>
+                <p>
+                    {{ ((disciplineScore.score||{}).estagio3||{}).presencial }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio3||{}).presencial">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+
+            <ion-item>
+                <h2>Sua Nota</h2>
+                <p *ngIf="!((disciplineScore.score||{}).estagio3||{}).mediaEstagio">
+                    {{ ((disciplineScore.score||{}).estagio2||{}).estagio }}
+                </p>
+                <p *ngIf="((disciplineScore.score||{}).estagio3||{}).mediaEstagio">
+                    {{ ((disciplineScore.score||{}).estagio3||{}).mediaEstagio }}
+                </p>
+                <p *ngIf="!((disciplineScore.score||{}).estagio3||{}).mediaEstagio && !((disciplineScore.score||{}).estagio3||{}).estagio">
+                    Ainda sem nota
+                </p>
+            </ion-item>
+            
+        </ion-list>
+    </div>
+
+    <ion-list class="score-average">
+        <ion-item>
+            <h2>
+                Média
+            </h2>
+            <p>
+                {{ (disciplineScore.score||{}).media }}
+            </p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

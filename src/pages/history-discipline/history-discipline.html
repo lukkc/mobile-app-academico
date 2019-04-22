@@ -1,0 +1,52 @@
+<ion-header [ngClass]="theme">
+    <ion-toolbar>
+        <ion-title>
+            {{discipline.nome | ownName}}
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+                <span ion-text showWhen="ios">Voltar</span>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content [ngClass]="theme">
+    <div class="item-discipline-details">
+        <ion-list>
+
+            <ion-item>
+                <h2>Média das Notas</h2>
+                <p>{{discipline.media_notas}}</p>
+            </ion-item>
+
+            <ion-item>
+                <h2>Período Letivo</h2>
+                <p>{{discipline.periodo_letivo | schoolYear}}</p>
+            </ion-item>
+
+            <ion-item>
+                <h2>Faltas</h2>
+                <p>{{discipline.fatas}}</p>
+            </ion-item>
+
+            <ion-item>
+                <h2>Créditos</h2>
+                <p>{{discipline.credito}}</p>
+            </ion-item>
+
+            <ion-item>
+                <h2>C.H</h2>
+                <p>{{discipline.ch}}</p>
+            </ion-item>
+
+            <ion-item>
+                <h2>Situação</h2>
+                <p>{{discipline.situcao | ownName}}</p>
+            </ion-item>
+
+        </ion-list>
+    </div>
+</ion-content>

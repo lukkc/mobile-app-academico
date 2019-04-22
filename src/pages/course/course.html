@@ -1,0 +1,57 @@
+<ion-header [ngClass]="theme">
+    <ion-navbar>
+        <ion-title>Curso</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content [ngClass]="theme">
+    <ion-list class="course-information">
+
+        <ion-item>
+            <h2>Curso</h2>
+            <p>{{ courseInformation.name | ownName }}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Habilitação</h2>
+            <p>{{ courseInformation.license | ownName }}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Turno</h2>
+            <p>{{ courseInformation.shift | ownName }}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Situação</h2>
+            <p>{{ courseInformation.situation | ownName }}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Tipo de Ingresso</h2>
+            <p>{{ courseInformation.typeTicket | ownName }}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Data de Ingresso</h2>
+            <p>{{ courseInformation.dateEntry | datePt: "full"}}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Coeficiente de Rendimento</h2>
+            <p>{{ courseInformation.coefficientYield | decimalPlaces: 2 }}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Média Global</h2>
+            <p>{{ courseInformation.overallAverage | decimalPlaces: 1 }}</p>
+        </ion-item>
+
+        <ion-item>
+            <h2>Matriz Curricular</h2>
+            <p>{{ courseInformation.curriculum | ownName }}</p>
+        </ion-item>
+
+    </ion-list>
+</ion-content>

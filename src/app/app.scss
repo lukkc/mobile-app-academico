@@ -1,0 +1,156 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.ios, .md {
+
+    ion-header,
+    ion-content {
+        transition: none;
+    }
+
+    ion-list,
+    ion-card,
+    ion-item {
+        transition: none;
+
+        * {
+            transition: none;
+        }
+    }
+
+    .light {
+
+        &.header {
+            background: #f8f8f8;
+
+            & .toolbar,
+            & .toolbar-background {
+                background: #f8f8f8;
+            }
+
+            & .toolbar-title,
+            & button {
+                color: #1c1f2b;
+            }
+        }
+
+        .tabbar {
+            background: #f8f8f8;
+        }
+    }
+
+    .dark {
+
+        &.header {
+            background: #1c1f2b;
+
+            & .toolbar,
+            & .toolbar-background {
+                background: #1c1f2b;
+            }
+
+            & .toolbar-title,
+            & button {
+                color: #fff;
+            }
+        }
+
+        .tabbar {
+            background: color($colors, dark);
+        }
+    }
+
+    ion-menu {
+
+// ====================== light theme =========================
+
+        .light {
+
+            .toolbar-background {
+                background: #f9f9f9;
+            }
+
+            &.content {
+                background: #f9f9f9;
+            }   
+    
+            button {
+                background: #f7f7f7;
+                color: #424242;
+  
+                &:focus,
+                &:active,
+                &:hover {
+                    background: #f7f7f7;
+                    color: #424242;
+                }
+            }
+        }
+
+// ====================== dark theme ==========================
+
+        .dark {
+
+            .toolbar-background {
+                background: color($colors, dark)
+            }
+
+            &.content {
+                background: color($colors, dark)
+            }  
+    
+            button {
+                background: #222532;
+                color: color($colors, light);
+    
+                &:focus,
+                &:active,
+                &:hover {
+                    background: #222532;
+                    color: color($colors, light);
+                }
+            }
+        }
+
+// ====================== all themes ==========================
+
+        .title-ios {
+            padding-left: 1.6rem;
+    
+            & .toolbar-title-ios {
+                overflow: visible;
+                text-align: left;
+            }
+        }
+
+        .item-inner {
+            border-bottom: none !important;
+        }
+
+        button {
+            min-height: 6.5rem;
+            margin-bottom: 0.2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-bottom: none !important;
+
+            & ion-icon {
+                min-height: 2.5rem;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

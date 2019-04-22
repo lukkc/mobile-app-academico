@@ -1,0 +1,31 @@
+<ion-menu side="right" type="push" [content]="nav">
+
+    <ion-header [ngClass]="theme">
+      <ion-toolbar>
+        <ion-title text-left>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content [ngClass]="theme">
+      <ion-list>
+        <button ion-item detail-none menuClose (click)="pushProfile()">
+            Perfil
+            <ion-icon name="md-person" item-end></ion-icon>
+        </button>
+        <button ion-item detail-none menuClose (click)="pushCourse()">
+            Curso
+            <ion-icon name="md-school" item-end></ion-icon>
+        </button>
+        <button ion-item detail-none menuClose (click)="pushSettings()">
+            Configurações
+            <ion-icon name="md-settings" item-end></ion-icon>
+        </button>
+        <button ion-item detail-none menuClose (click)="logout()">
+            Sair
+            <ion-icon name="md-log-out" item-end></ion-icon>
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<ion-nav #nav [root]="rootPage" ></ion-nav>

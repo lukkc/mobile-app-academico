@@ -1,0 +1,211 @@
+.ios,
+.md {
+    page-settings {
+    
+// ==================== light theme =======================
+
+        .light {
+
+            &.content{
+                background: #f8f8f8;
+            }
+
+            ion-list {
+                background: #f5f5f5;
+            }
+
+            ion-list-header {
+                color: #147167;
+            }
+
+            ion-card {
+    
+                ion-card-content {
+                    color: #858585;
+                }
+            }
+
+            ion-item {
+                color: #666;
+
+                ion-label {
+                    color: #666;
+                }
+
+                ion-radio {
+
+                    & .radio-icon {
+                        border-color: #666;
+                    }
+
+                    &.radio-ios .radio-checked .radio-inner {
+                        border-color: #147167;
+                    }
+
+                    &.radio-md .radio-icon.radio-checked {
+                        border-color: #147167;
+    
+                        & .radio-inner {
+                            background: #147167;
+                        }
+                    }
+                }
+
+                ion-checkbox {
+
+                    & .checkbox-icon {
+                        border-color: #666;
+                        background-color: transparent;
+                    }
+
+                    &.checkbox-ios .checkbox-checked .checkbox-inner {
+                        border-color: #147167;
+                    }
+
+                    &.checkbox-md .checkbox-icon.checkbox-checked {
+                        background: transparent;
+                        border-color: transparent; 
+    
+                        & .checkbox-inner {
+                            border-color: #147167;  
+                        }
+                    }
+                }
+                
+            }
+        }
+
+// ==================== dark theme ========================
+
+        .dark {
+
+            &.content{
+                background: #1c1f2b;
+            }
+
+            ion-list {
+                background: #222533;
+            }
+
+            ion-list-header {
+                color: #31978c;
+                font-weight: bold;
+            }
+
+            ion-card {
+    
+                ion-card-content {
+                    color: #8e8f95;
+                }
+            }
+
+            ion-item {
+                color: #c2c3c5;
+
+                & .item-inner {
+                    border-bottom: 0.1rem solid #1c1f2b !important;
+                }
+
+                ion-label {
+                    color: #c2c3c5;
+                }
+
+                ion-radio {
+
+                    & .radio-icon {
+                        border-color: #c2c3c5;
+                    }
+
+                    &.radio-ios .radio-checked .radio-inner {
+                        border-color: #31978c;
+                    }
+
+                    &.radio-md .radio-icon.radio-checked {
+                        border-color: #31978c;
+
+                        & .radio-inner {
+                            background: #31978c;
+                        }
+                    }
+                }
+
+                ion-checkbox {
+
+                    & .checkbox-icon {
+                        border-color: #c2c3c5;
+                        background-color: transparent;
+                    }
+
+                    &.checkbox-ios .checkbox-checked .checkbox-inner {
+                        border-color: #31978c;
+                    }
+
+                    &.checkbox-md .checkbox-icon.checkbox-checked {
+                        background: transparent;
+                        border-color: transparent; 
+    
+                        & .checkbox-inner {
+                            border-color: #31978c;  
+                        }
+                    }
+                }
+                
+            }
+        }
+
+// ==================== all themes ========================
+
+
+        ion-list {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        ion-list-header {
+            min-height: 3.5rem;
+            padding: 0 1.6rem;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            transition: none;
+            background: transparent;
+            border-bottom: none;
+            border-top: none;
+        }
+
+        ion-card {
+
+            background: transparent;
+            box-shadow: none;
+
+            ion-item {
+                padding-left: 2.5rem;
+            }
+
+            ion-card-content {
+                padding-left: 2.5rem;
+                font-size: 1.3rem;
+                // font-weight: bold;
+            }
+        }
+
+        ion-item {
+            padding-left: 3.5rem;
+            transition: none;
+            background: transparent;
+
+            &:last-child {
+                border-bottom: none !important;
+
+                & .item-inner {
+                    border-bottom: none !important;
+                }
+            }
+
+            &:first-child {
+                border-top: none !important;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,21 @@
+<ion-header [ngClass]="theme">
+    <ion-navbar>
+        <ion-title>{{period.name}} Período</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content [ngClass]="theme">
+    <ion-list>
+        <div class="item-discipline" *ngFor="let discipline of period.subjects">
+            <button class="item-discipline-header" (click)="modalDisciplineDetails(discipline)">
+                <div class="discipline-name">
+                    <h1>{{discipline.nome | uppercase}}</h1>
+                </div>
+                <div class="discipline-status">
+                    <p>{{discipline.status | ownName}}</p>
+                </div>
+            </button>
+        </div>
+    </ion-list>
+</ion-content>

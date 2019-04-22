@@ -1,0 +1,119 @@
+.ios,
+.md {
+    page-history-discipline {
+
+// =========================== light theme ==============================
+
+        .light {
+
+            &.content {
+                background: #f8f8f8;
+            }
+        
+            ion-list {
+                background: #f8f8f8;
+        
+                & ion-item {
+                    background: #f8f8f8;
+        
+                    & .item-inner {
+                        border-bottom: 0.2rem solid #eee !important;
+                    }
+        
+                    & .label {
+                        & h2 {
+                            font-size: 1.2rem;
+                            font-weight: normal;
+                            color: #147167;
+                        }
+        
+                        & p {
+                            font-size: 1.5rem;
+                            color: #666666;
+                        }
+                    }
+                }
+            }
+        }
+
+
+// ======================== dark theme ============================
+
+        .dark {
+
+            &.content {
+                background: #363948;
+            }
+        
+            ion-list {
+                background: #363948;
+        
+                & ion-item {
+                    background: #363948;
+        
+                    & .item-inner {
+                        border-bottom: 0.1rem solid #323542 !important;
+                    }
+        
+                    & .label {
+        
+                        & h2 {
+                            color: #31978c;
+                        }
+        
+                        & p {
+                            color: #c2c3c5;
+                        }
+                    }
+                }
+            }
+        }
+
+
+// ============================ all themes ==============================
+
+        ion-toolbar {
+            & .toolbar-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        ion-list {
+            padding: 1rem 0; 
+            margin: 0;
+
+            & ion-item {
+                margin-bottom: 0;
+
+                & * {
+                    transition: none;
+                }
+
+                &:first-child {
+                    border-top: none !important;
+                }
+
+                &:last-child,
+                &:last-child .item-inner {
+                    border-bottom: none !important;
+                }
+
+                & .label {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    white-space: normal;
+
+                    & h2 {
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+
+                    & p {
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

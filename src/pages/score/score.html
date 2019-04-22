@@ -1,0 +1,23 @@
+<ion-header [ngClass]="theme">
+    <ion-navbar>
+        <ion-title>Notas</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only menuToggle="right">
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content [ngClass]="theme">
+    <ion-list>
+
+        <button class="item-discipline-header" (click)="scoreModal(disciplineScore)" *ngFor="let disciplineScore of subjectsScore">
+            <div class="discipline-name">
+                <h1>{{ disciplineScore.name | uppercase}}</h1>
+            </div>
+        </button>
+
+    </ion-list>
+</ion-content>

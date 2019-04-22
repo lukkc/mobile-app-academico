@@ -1,0 +1,21 @@
+.ios,.md {
+    .tab-button[aria-selected=true] .tab-button-icon.ion-md-list-box {
+        color: #69a9c3;
+    }
+
+    .tab-button[aria-selected=true] .tab-button-icon.ion-md-medal {
+        color: #a22626;
+    }
+
+    .tab-button[aria-selected=true] .tab-button-icon.ion-md-flash {
+        color: #d0b43f;
+    }
+
+    .tab-button[aria-selected=true] .tab-button-icon.ion-md-time {
+        color: #31978c;
+    }
+
+    .tab-button-icon.icon {
+        color: color($colors, tertiary);
+    }
+}

@@ -1,0 +1,82 @@
+<ion-header [ngClass]="theme">
+
+    <ion-navbar>
+        <ion-title>Horários</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only menuToggle="right">
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="dayWeek">
+            <ion-segment-button value="monday">
+                SEG
+            </ion-segment-button>
+            <ion-segment-button value="tuesday">
+                TER
+            </ion-segment-button>
+            <ion-segment-button value="wednesday">
+                QUA
+            </ion-segment-button>
+            <ion-segment-button value="thursday">
+                QUI
+            </ion-segment-button>
+            <ion-segment-button value="friday">
+                SEX
+            </ion-segment-button>
+            <ion-segment-button value="saturday">
+                SÁB
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content [ngClass]="theme">
+    <div class="main-content" [ngSwitch]="dayWeek" (swipe)="swipeSegment($event)">
+
+        <div class="notice-without-class" *ngSwitchCase="'withoutClass'">
+            <h1>SEM AULAS HOJE</h1>
+        </div>
+
+        <div *ngFor="let classesDay of classesWeek">
+            <ion-list *ngSwitchCase="classesDay.day">
+
+                <div class="notice-without-class" *ngIf="!classesDay.classrooms.length">
+                    <h1>SEM AULAS HOJE</h1>
+                </div>
+
+                <ion-card *ngIf="classesDay.classrooms.length">
+                    <ion-card-content no-padding>
+                        <ion-list>
+
+                            <ion-item *ngFor="let class of classesDay.classrooms">
+                                <h3 class="item-title"> {{class.discipline | uppercase}} </h3>
+                                <div class="content-group">
+                                    <h4 *ngIf="class.teachers.length > 1" class="item-label">Professores</h4>
+                                    <h4 *ngIf="class.teachers.length == 1" class="item-label">Professor(a)</h4>
+                                    <p class="item-subTitle" *ngFor="let teacher of class.teachers">
+                                        {{teacher | ownName}}
+                                    </p>
+                                    <div>
+                                        <h4 *ngIf="class.rooms.length" class="item-label">Sala</h4>
+                                        <p *ngFor="let room of class.rooms">{{room | uppercase}}</p>
+                                        <h4 class="item-label">Horário</h4>
+                                        <p *ngFor="let schedule of class.schedules">{{schedule}}</p>
+                                    </div>
+                                </div>
+                            </ion-item>
+
+                        </ion-list>
+                    </ion-card-content>
+                </ion-card>
+
+            </ion-list>
+        </div>
+
+    </div>
+</ion-content>

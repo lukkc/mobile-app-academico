@@ -1,0 +1,233 @@
+.ios,
+.md {
+  page-profile {
+
+// ====================== light theme ============================
+
+    .light {
+
+      &.content {
+        background: #f9f9f9;
+      }
+
+      ion-card {
+        background-color: transparent;
+
+        & .avatar-section {
+          background-color: #f3f3f3;
+
+          & ion-fab button {
+            background: #f3f3f3;
+          }
+        }
+      }
+
+      ion-list {
+        background: #f3f3f3;
+
+        &:first-child {
+          border-top: 0.4rem solid #ececec;
+        }
+
+        & ion-list-header {
+          background-color: transparent;
+
+          & h3 {
+            color: #147167;
+          }
+        }
+
+        & ion-item {
+          background: #f3f3f3;
+
+          &.item-block:last-child,
+          & .item-inner {
+            border-bottom: 0.2rem solid #efefef !important;
+          }
+
+          & h3 {
+            font-weight: normal;
+            color: #147167;
+          }
+
+          & p {
+            color: #666;
+          }
+        }
+      }
+    }
+
+// ====================== dark theme =============================
+  
+    .dark {
+      $colorsProfile: (
+        ligBlue: #a7c5e4,
+        midBlue: #223043,
+        lightDarkBlue: #42485b,
+        superDarkBlue: #222530
+      );
+
+      &.content {
+        background: color($colors, lightDark);
+      }
+
+      ion-card {
+        background-color: transparent;
+
+        & .avatar-section {
+          background-color: color($colorsProfile, lightDarkBlue);
+        }
+      }
+
+      ion-list {
+        background: color($colors, dark);
+
+        & ion-list-header {
+          background-color: transparent;
+
+          & h3 {
+            color: #31978c;
+          }
+        }
+
+        & ion-item {
+          background: color($colors, dark);
+
+          &.item-block:last-child,
+          & .item-inner {
+            border-bottom: 0.2rem solid color($colorsProfile, superDarkBlue) !important;
+          }
+
+          & h3 {
+            font-weight: bold;
+            color: #31978c;
+          }
+
+          & p {
+            color: #c2c3c5;
+          }
+        }
+      }
+    }
+
+
+// ===================== all themes ==================================
+
+    $colorsFab: (
+      remove: #f53d3d,
+      add: #277c73,
+      cam: #d1c07b
+    );
+
+    ion-card {
+      position: relative;
+      width: 100%;
+      box-shadow: none;
+
+      & ion-card-content {
+        padding-bottom: 3.5rem;
+      }
+
+      & .avatar-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 16rem;
+        height: 16rem;
+        margin: auto;
+        border-radius: 50%;
+
+        & ion-avatar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 16rem;
+          height: 16rem;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        & ion-fab button {
+          box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        & .fab-cam {
+          position: absolute;
+          top: 0;
+          right: -2.3rem;
+
+          & button {
+            color: color($colorsFab, cam);
+          }
+        }
+
+        & .fab-add {
+          & button {
+            color: color($colorsFab, add);
+          }
+        }
+
+        & .fab-remove {
+          position: absolute;
+          bottom: 2rem;
+          left: -3.2rem;
+
+          & button {
+            color: color($colorsFab, remove);
+          }
+        }
+      }
+    }
+
+    ion-list {
+      margin-bottom: 0 !important;
+
+      & ion-list {
+        margin-bottom: 4rem !important;
+      }
+
+      & ion-list:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      & ion-list-header {
+        padding-top: 1rem;
+        border: none;
+
+        & h3 {
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+      }
+
+      & ion-item {
+
+        & * {
+          transition: none;
+        }
+
+        &.item-block:last-child .item-inner {
+          border-bottom: none !important;
+        }
+
+        & ion-label {
+          white-space: normal;
+        }
+
+        & h3 {
+          font-size: 1.2rem;
+        }
+
+        & p {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

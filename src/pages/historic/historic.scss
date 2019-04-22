@@ -1,0 +1,106 @@
+.ios,
+.md {
+    page-historic {
+// =================== light theme ===========================
+        
+        .light {
+            &.content {
+                background: #f8f8f8;
+            }
+
+            .item {
+                border-bottom: 0.1rem solid #e1e1e1;
+                background: #eee;
+    
+                & .label {
+                    & h2 {
+                        color: #5a6173;
+                    }
+                }
+    
+                & .section-status-image {
+                    border-left: 0.2rem solid #e1e1e1;
+                    background: #f4f4f4;
+                }
+            }
+        }
+
+// =================== dark theme ============================
+
+        .dark {
+        
+            &.content {
+                background: color($colors, tertiary);
+            }
+
+            .item {
+                margin-bottom: 0.1rem;
+                background: #363948;
+
+                & .label {
+                    & h2 {
+                        color: #fff;
+                    }
+                }
+
+                & .section-status-image {
+                    border-left: 0.2rem solid #3d4252;
+                    background: #42485b
+                }
+            }
+        }
+
+
+// ========================= all themes ==========================
+        $itemHeight: 7rem;
+
+        ion-list {
+            margin-bottom: 0;
+        }
+
+        .item {
+            transition: none;
+
+            & * {
+                transition: none;
+            }
+
+            & .label {
+                display: flex !important;
+                align-items: center;
+                margin: 0;
+
+                & h2 {
+                    flex: 4;
+                    font-weight: bold;
+                }
+            }
+
+            &:first-child {
+                border-top: none !important;
+            }
+
+            &:last-child,
+            & .item-inner {
+                border-bottom: none !important;
+            }
+
+            & .item-inner {
+                padding: 0 !important;
+            }
+
+            & .section-status-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 7rem;
+                height: $itemHeight;
+            }
+
+            & .status-image {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+}

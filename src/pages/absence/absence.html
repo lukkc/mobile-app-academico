@@ -1,0 +1,33 @@
+<ion-header [ngClass]="theme">
+    <ion-navbar>
+        <ion-title>Faltas</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only menuToggle="right">
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="theme">
+    <ion-list>
+        <ion-card *ngFor="let discipline of subjects">
+            <ion-card-header>
+                <h2>{{discipline.name | uppercase}}</h2>
+            </ion-card-header>
+
+            <div class="section-progress-bar">
+                <p class="indicator-absence" [ngStyle]="indicatorControl(discipline.percentage)">{{discipline.percentage | decimalPlaces: 1}}%</p>
+                <div class="progress-bar-content">
+                    <div [ngStyle]="progressBarControl(discipline.percentage)" class="progress-bar"></div>
+                </div>
+            </div>
+
+            <ion-card-content no-padding>
+                <ion-item>
+                    <h3>Você faltou {{discipline.missed}} vezes</h3>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>

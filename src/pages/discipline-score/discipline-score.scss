@@ -1,0 +1,198 @@
+
+.ios, .md {
+    page-discipline-score {
+
+// ======================= light theme ==========================
+        .light {
+            &.content {
+                background: #f8f8f8;
+            }
+    
+            .score-average {
+                background: #f0f0f0;
+                border-top: 0.2rem solid #d7d7d7;
+                border-bottom: 0.1rem solid #d7d7d7;
+                min-height: 7.5rem;
+    
+                & ion-item {
+                    background: transparent;
+    
+                    & ion-label {
+                        margin-top: 1.3rem;
+                    }
+                }
+            }
+    
+            ion-list {
+                padding-bottom: 2rem;
+                background: #f8f8f8;
+            }
+    
+            ion-list-header {
+                border-top: 0.2rem solid #e2e2e2;
+                border-bottom: none;
+                background: transparent;
+    
+                & ion-label {
+                    color: #8c8c8c;
+                }
+            }
+    
+            ion-item {
+                background: transparent;
+    
+                & .item-inner {
+                    border-bottom: 0.1rem solid #eee !important;
+                }
+               
+                & ion-label{
+                    margin-top: 0.65rem;
+                    margin-bottom: 0.65rem;
+    
+                    & h2 {
+                        color: #147167;
+                    }
+    
+                    & p {
+                        color: #666;
+                    }
+                }
+            }
+        }
+
+// ======================= dark theme ===========================
+
+        .dark {
+    
+            &.content {
+                background: color($colors, tertiary);
+            }
+    
+            .score-average {
+                background: #2e313c;
+                min-height: auto;
+    
+                & ion-item {
+                    background: #2e313c;
+                }
+            }
+    
+            ion-list {
+                padding-bottom: 3rem;
+                background: #333643;
+            }
+    
+            ion-list-header {
+                border-bottom: 0.4rem solid #2e313c;
+                background: #333643;
+    
+                & ion-label {
+                    color: #5b6173;
+                }
+            }
+    
+            ion-item {
+                background: #333643;
+    
+                & .item-inner {
+                    border-bottom: 0.1rem solid #2f323c !important;
+                }
+                
+               
+                & ion-label{
+    
+                    & h2 {
+                        color: #31978c;
+                    }
+    
+                    & p {
+                        color: #c2c3c5;
+                    }
+                }
+            }
+        }
+
+
+// ======================= all themes =============================
+
+        ion-toolbar {
+            & .toolbar-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        .score-average {
+            padding: 0.5rem;
+
+            & ion-item {
+
+                & ion-label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-align: center;
+                }
+
+                & h2 {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+                & p {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        ion-list {
+            border-top: none;
+
+            &.list-md {
+                margin-bottom: 1.7rem;
+            }
+
+            &.list-ios {
+                margin-bottom: 1.1rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ion-list-header {
+            margin-bottom: 0;
+            border-top: none;
+
+            & ion-label {
+                font-weight: bold;
+            }
+        }
+
+        ion-item {
+
+            &:last-child,
+            &:last-child .item-inner {
+                border-bottom: none !important;
+            }
+           
+            &:first-child,
+            &:first-child .item-inner {
+                border-top: none !important;
+            }
+           
+            & ion-label{
+
+                & h2 {
+                    font-size: 1.2rem;
+                }
+
+                & p {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,182 @@
+.ios,
+.md {
+  page-register {
+
+    @mixin borderAndShadowNone {
+      border-top: none !important;
+      border-bottom: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      box-shadow: none !important;
+    
+      &:focus,
+      &:focus-within,
+      &:active,
+      &:hover{
+        border-top: none !important;
+        border-bottom: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;
+      }
+    }
+      
+    ion-content {
+        background-color: color($colors, lightDark);
+    }
+
+    ion-card {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    ion-card-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      margin-top: 1.4rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: color($colors, light);
+    }
+
+    .card-icon-title {
+      width: 4rem;
+      margin-right: .5rem;
+    }
+
+    .card-info {
+      padding: 1rem;
+
+      & p {
+        margin-bottom: 1rem;
+        color: color($colors, light);
+        font-weight: bold;
+      }
+    }
+
+    ion-list {
+      width: 100%;
+    }
+    
+    ion-item {
+
+      padding: 0;
+
+      .item-inner {
+        padding: 0 !important;
+        margin: 0 !important;
+      
+        @include borderAndShadowNone;
+      }
+
+      .cloned-input {
+        margin: 0 !important;
+      }
+
+      @include borderAndShadowNone;
+    }
+
+    .form-register {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 95%;
+      margin: auto;
+      margin-top: 1rem;
+    }
+
+    .input-group {
+      position: relative;
+      width: 100%;
+      height: 5.5rem;
+      margin-bottom: .5rem;
+    }
+
+    .input-group .label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4rem;
+      height: 5.5rem;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .input-group ion-icon {
+      font-size: 2.5rem;
+      color: color($colors, light);
+    }
+
+    ion-input {
+      margin: 0;
+
+      @include borderAndShadowNone;
+    }
+
+    .input-group input {
+      width: 100%;
+      height: 5.5rem;
+      padding-left: 5rem;
+      margin: 0;
+      background-color: color($colors, primary);
+      font-size: 1.5rem;
+      color: color($colors, light);
+
+      &:focus {
+        background-color: color($colors, secondary);
+      }
+
+      @include borderAndShadowNone;
+    }
+
+    .button-register {
+      height: 5.5rem;
+      background-color: color($colors, dark);
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: color($colors, light);
+
+      &:hover {
+        background-color: color($colors, dark);
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 95%;
+      margin: auto;
+    }
+
+    .termo-uso {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
+      margin-top: 2.5rem;
+
+      & a {
+        color: color($colors, light);
+      }
+    }
+
+    .logo-footer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 2.5rem;
+    }
+
+    .logo-footer img{
+      width: 70%;
+      margin: auto;
+    }
+  }
+}

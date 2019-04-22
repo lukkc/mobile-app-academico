@@ -1,0 +1,6 @@
+<ion-tabs #tabs [ngClass]="theme">
+  <ion-tab [root]="schedulesPage" [rootParams]="theme"  tabIcon="md-time"></ion-tab>
+  <ion-tab [root]="scorePage" [rootParams]="theme" tabIcon="md-medal"></ion-tab>
+  <ion-tab [root]="absencePage" [rootParams]="theme" tabIcon="md-flash"></ion-tab>
+  <ion-tab [root]="historicPage" [rootParams]="theme" tabIcon="md-list-box"></ion-tab>
+</ion-tabs>

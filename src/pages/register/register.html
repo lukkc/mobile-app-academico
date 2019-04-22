@@ -1,0 +1,54 @@
+<ion-content>
+    <ion-list>
+
+        <ion-card>
+            <ion-card-content no-padding>
+                <ion-card-title>
+                    <img class="card-icon-title" src="assets/imgs/icon-register.svg"> Cadastro
+                </ion-card-title>
+
+                <div class="card-info">
+                    <p>
+                        Oi, vamos começar!
+                    </p>
+                    <p>
+                        Para a gente realizar seu cadastro, você só precisa informa a matricula e senha da faculdade que você estuda.
+                    </p>
+                    <p>
+                        Depois, vamos buscar seus dados e iniciar o aplicativo. A gente precisa de alguns minutos pra fazer isso. Voltamos logo depois.
+                    </p>
+                </div>
+            </ion-card-content>
+        </ion-card>
+
+        <form class="form-register" (submit)="register()">
+            <ion-item class="input-group">
+                <ion-label>
+                    <ion-icon name="md-person"></ion-icon>
+                </ion-label>
+                <ion-input (ionFocus)="scrollDownInputFocus()" [(ngModel)]="registration" name="registration" placeholder="Matrícula" type="number"></ion-input>
+            </ion-item>
+
+            <ion-item class="input-group">
+                <ion-label>
+                    <ion-icon name="md-key"></ion-icon>
+                </ion-label>
+                <ion-input (ionFocus)="scrollDownInputFocus()" [(ngModel)]="password" name="password" placeholder="Senha" type="password"></ion-input>
+            </ion-item>
+
+            <button class="button-register" ion-button full>
+                Cadastrar
+            </button>
+        </form>
+
+        <footer class="footer">
+            <div class="termo-uso">
+                <a>Termo de uso</a>
+            </div>
+            <div class="logo-footer">
+                <img src="assets/imgs/logofooter.png" alt="">
+            </div>
+        </footer>
+
+    </ion-list>
+</ion-content>

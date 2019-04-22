@@ -1,0 +1,140 @@
+.ios,
+.md {
+    page-absence {
+
+// ======================== all themes ================================
+        ion-list {
+            margin: 0;
+            margin-bottom: 0;
+        }
+
+        ion-card {
+            width: 100%;
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        ion-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            white-space: normal;
+
+            & h2 {
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+        }
+
+        ion-card-content {
+            & ion-item {
+                & h3 {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .progress-bar-content {
+            position: relative;
+            width: 100%;
+            height: 2.5rem;
+        }
+
+        .indicator-absence {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+        .progress-bar {
+            position: relative;
+            padding: 0.3rem;
+            text-align: center;
+            height: inherit;
+        }
+
+// ===================== light theme =======================================
+        .light {
+
+            &.content {
+                background: #f8f8f8;
+            }
+
+            ion-card {        
+                border-bottom: 0.2rem solid #eeeeee;
+                background: #f8f8f8;
+                box-shadow: none;
+            }
+
+            ion-card-header {
+                & h2 {
+                    color: #5b6173;
+                }
+            }
+
+            ion-card-content {
+                & ion-item {
+                    background-color: transparent; 
+
+                    & h3 {
+                        color: #5b6173;
+                    }
+                }
+            }
+
+            .progress-bar-content {
+                background: #ececed;
+            }
+
+            .indicator-absence {
+                color: #178c78;
+            }
+
+            .progress-bar {
+                background: #178c78;
+            }
+        }
+
+
+// ======================= dark theme =========================================
+        .dark {
+
+            &.content {
+                background: color($colors, tertiary);
+            }
+    
+            ion-card {
+                margin-bottom: 0.2rem;
+                background: #333643;
+            }
+    
+            ion-card-header {
+                & h2 {
+                    color: #c2c3c5;
+                }
+            }
+    
+            ion-card-content {
+                & ion-item {
+                    background-color: transparent; 
+    
+                    & h3 {
+                        color: #5b6173;
+                    }
+                }
+            }
+    
+            .progress-bar-content {
+                background: #393c4c;
+            }
+    
+            .indicator-absence {
+                color: #178c78;
+            }
+    
+            .progress-bar {
+                background: #178c78;
+            }
+        }
+    }
+}

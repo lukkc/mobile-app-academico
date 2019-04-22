@@ -1,0 +1,103 @@
+.ios, .md {
+    page-detailed-history {
+
+// ============================ all themes ==============================
+
+        $itemHeight: 9rem;
+    
+        ion-list {
+            margin: 0 !important;
+        }
+    
+        .item-discipline {
+            width: 100%;
+            height: $itemHeight;
+            overflow: hidden;
+        }
+    
+        .item-discipline-header {
+            width: 100%;
+            height: $itemHeight;
+            padding: 0.5rem 1.5rem;
+            text-align: left;
+            font-weight: bold;
+    
+            & .discipline-name {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                pointer-events: none;
+    
+                & h1 {
+                    width: 90%;
+                    margin: 0 0 0.3rem 0;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                }
+            }
+    
+            & .discipline-status {
+                width: 100%;
+                pointer-events: none;
+    
+                & p {
+                    margin: 0;
+                    font-size: 1.2rem;
+                }
+            }      
+        }
+
+// =========================== light theme ==============================
+
+        .light {
+    
+            &.content {
+                background-color: #f8f8f8 !important;
+            }
+    
+    
+            .item-discipline {
+                border-bottom: 0.2rem solid #eee; 
+            }
+    
+            .item-discipline-header {
+                color: #5b6173;
+                background: #f8f8f8;
+        
+        
+                & .discipline-status {
+                    & p {
+                        color: #a5a5a5;
+                    }
+                }     
+            }
+        }
+
+        
+// ======================== dark theme ============================
+
+        .dark {
+    
+            &.content {
+                background-color: color($colors, tertiary) !important;
+            }
+    
+            .item-discipline {
+                border-bottom: 0.2rem solid #2f323c;
+            }
+        
+            .item-discipline-header {
+                color: #c2c3c5;
+                background: #333643;
+        
+                & .discipline-status {
+                    & p {
+                        color: #5b6173;
+                    }
+                }       
+            }
+        }
+    }
+}

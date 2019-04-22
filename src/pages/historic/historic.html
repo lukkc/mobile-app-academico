@@ -1,0 +1,21 @@
+<ion-header [ngClass]="theme">
+    <ion-navbar>
+        <ion-title>Histórico</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only menuToggle="right">
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="theme">
+    <ion-list>
+        <button ion-item *ngFor="let period of periods" (click)="periodDetails(period)">
+            <h2>{{period.name}} Período</h2>
+            <div class="section-status-image">
+                <img class="status-image" [src]="period.imgStatus" alt="">
+            </div>
+        </button>
+    </ion-list>
+</ion-content>
